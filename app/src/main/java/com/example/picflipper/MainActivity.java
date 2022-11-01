@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import java.io.*;
-import java.lang.Thread;
+//import java.lang.Thread;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,22 +32,19 @@ public class MainActivity extends AppCompatActivity {
                 try {
 
                     // set the wallpaper by calling the setResource function and
-                    // passing the drawable file
                     //String[] pics = {"R.drawable.baron", "R.drawable.animeguys", "R.drawable.bilgewater_wallpaper02", "R.drawable.cyberpop"};
 
-
+                    for (int i = 0; i < 5; i++) {
                         wallpaperManager.setResource(R.drawable.baron);
                         wallpaperManager.setResource(R.drawable.animeguys);
-
                         wallpaperManager.setResource(R.drawable.bilgewater_wallpaper02);
                         wallpaperManager.setResource(R.drawable.cyberpop);
-
+                    }
 
 
                     //wallpaperManager.setResource(R.drawable.baron);
 
                 } catch (IOException e) {
-                    // here the errors can be logged instead of printStackTrace
                     e.printStackTrace();
                 }
             }
